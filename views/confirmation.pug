@@ -1,0 +1,7 @@
+extends layout
+include mixins/_crag
+
+block content
+    h2= title
+    each i in crag
+        +crag(i, searchData)

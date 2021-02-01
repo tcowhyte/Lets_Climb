@@ -1,0 +1,11 @@
+extends layout
+include mixins/_crag
+
+block content
+  h2= title
+  each crag in allCrags
+    .crag_wrapper
+      +crag(crag)
+
+  
+    

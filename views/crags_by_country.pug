@@ -1,0 +1,10 @@
+extend layout
+include mixins/_crag
+
+block content
+    h2= title
+    each crag in countryList
+        .crag_wrapper
+            +crag(crag)
+    else
+        li There are no cragss

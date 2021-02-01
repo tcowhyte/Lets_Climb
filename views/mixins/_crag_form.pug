@@ -1,0 +1,30 @@
+mixin cragForm(crag={})
+    
+    form(action="" method="POST" enctype="multipart/form-data")
+        .form_input
+            label(for="crag_name") Crag name:
+            input(type="text" name="crag_name" value=crag.crag_name required)
+        .form_input
+            label(for="crag_description") Crag Description:
+            textarea(name="crag_description" id="crag_description" cols="30" rows="10" required )=crag.crag_description
+        .form_input
+            label(for="image") Crag Image
+            input(type="file" name="image" id="image" )
+        .form_input
+            label(for="star_rating") Star Rating:
+            input(type="number" name="star_rating" min="1" max="5" required value=crag.star_rating)
+        .form_input
+            label(for="country") Country:
+            input(type="text" name="country" id="country" required value=crag.country)
+        .form_input
+            label(for="cost_per_day") Guide Cost per Day:
+            input(type="number" name="cost_per_day" id="cost_per_day" required value=crag.cost_per_day)
+        .form_input
+            label(for="available") Available:
+            input(type="radio" id="available" name="available" value="true" checked)
+            label(for="available") Unavailable:
+            input(type="radio" id="unavailable" name="available" value="false")
+        .form_input
+            button(type="submit" class="button_small") CONFIRM
+
+    

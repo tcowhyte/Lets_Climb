@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+    h3= title
+    form(action="" method="POST")
+        .form_input
+            label(for="crag_id") Crag id:
+            input(type="text" name="crag_id" id="crag_id")
+            p or:
+        .form_input
+            label(for="crag_name") Crag Name:
+            input(type="text" name="crag_name" id="crag_name")
+        .form_input
+            button(type="submit" class="button_small") CONFIRM
+

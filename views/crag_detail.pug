@@ -1,0 +1,12 @@
+extend layout
+include mixins/_crag
+
+block content
+    each crag in cragData
+        .crag
+            if url.startsWith('/admin')
+                a(href=`${crag._id}/update`)
+                    button(class='button_small') Update Crag
+                a(href=`${crag._id}/delete`)
+                    button(class='button_small') Delete Crag
+            +crag(crag)

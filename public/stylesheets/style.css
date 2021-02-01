@@ -1,0 +1,237 @@
+html {
+  background-image: url('/images/el_cap.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+body{
+  background: #eee;
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 0 1em;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  font-size: 1.2em;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(43,40,40);
+}
+
+.search_nav {
+  background: #c1e6e9;
+  padding: 0.5em;
+}
+
+.search_nav > form{
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 100%;
+  height: 20px;
+  padding: 0.5em 0;
+  margin-top: 0.3em;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.input_wrapper{
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+select, button {
+  height: 36px;
+  width: 100%;
+  border: none;
+}
+
+button {
+  background: cadetblue;
+  border-radius: 5px;
+}
+
+img {
+  width: 100%;
+  max-height: 80%;
+}
+
+.outer_wrapper {
+  text-align: center;
+  font-size: 1em;
+}
+
+.crag {
+  background: white;
+  margin: 0 0 1em 0;
+}
+
+.crag_info {
+  padding:1em;
+  text-align: center;
+}
+
+.form_input {
+  margin: 1em 0;
+}
+
+.form_input input, textarea {
+  width:70%;
+  text-align: left;
+}
+
+.form_input label {
+  display: inline-block;
+  width: 20%;
+}
+
+textarea {
+  border: none;
+  border-radius: 5px;
+}
+
+.button_small {
+  width: 100px;
+  margin: 0.5em;
+}
+
+.country_wrapper > img {
+  width: 40px;
+  height: 40px;
+}
+
+.button {
+  background: cadetblue;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+.crag_order_details {
+  background: #eed;
+  text-align: center;
+  padding: 1em;
+}
+
+.bookings ul{
+  margin: 2em 0;
+  background:cadetblue;
+  padding: 10px;
+}
+
+.bookings li {
+  display: block;
+  background: #eee;
+  padding: 0.5em;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 0.5em;
+  border: 1px solid;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.close_btn {
+  float: right;
+}
+
+.close_btn:hover {
+  cursor: pointer;
+}
+
+.message_info {
+  color: blue;
+}
+
+.message_success {
+  color: green;
+}
+
+.message_error {
+  color:red;
+}
+
+@media (min-width: 1000px) {
+  nav {
+    flex-direction: row;
+  }
+
+  nav a {
+    flex: 1;
+  }
+
+  nav ul {
+    flex: 7;
+    text-align: right;
+    margin-right: 1em;
+  }
+
+  .search_nav form{
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  .input_wrapper {
+    margin: 0;
+    padding: 0.5em;
+    max-width: 250px;
+  }
+
+  .outer_wrapper {
+    text-align: left;
+  }
+
+  .crag_wrapper .crag {
+    display: flex;
+  }
+
+  .crag_img img.resize{
+    max-height: 50%;
+    max-width: 50%;
+  }
+
+  .crag_img {
+    flex: 1;
+    margin: 1em;
+  }
+
+  .crag_info {
+    flex: 1;
+    padding: 0 1em;
+    text-align: left;
+  }
+
+  .country_wrapper ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+  }
+
+  .crag_order_details {
+    text-align: left;
+  }
+
+}

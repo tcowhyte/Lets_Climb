@@ -1,0 +1,22 @@
+extends layout
+include mixins/_crag
+include mixins/_country_list
+
+block content
+
+  .outer_wrapper
+    .crag_wrapper
+      h2 Crags
+        a(href="/all") (see all):
+      ul
+        each crag in filteredCrags
+          +crag(crag)
+
+    .country_wrapper
+      h2 Countries
+        a(href='/countries') (see all)
+      ul
+        each country in filteredCountries
+          +countryList(country._id)
+
+  

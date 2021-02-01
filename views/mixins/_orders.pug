@@ -1,0 +1,11 @@
+mixin orders(order)
+
+    .bookings
+        ul
+            li= `Order ref: ${order._id}`
+            each data in order.crag_data
+                li= `Crag: ${data.crag_name}`
+                li= `Country: ${data.country}`
+                li= `Departure: ${order.order_details.dateOfDeparture}`
+                li= `Days: ${order.order_details.duration}`
+                li= `Guests: ${order.order_details.numberOfGuests}`
